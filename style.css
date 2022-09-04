@@ -1,0 +1,61 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000000;
+}
+
+form {
+  width: 400px;
+  padding: 1.5rem;
+  border: 1px solid #000000;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+form > h3 {
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+}
+
+form > div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="submit"],
+textarea {
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  font-size: 1.125rem;
+  color: #fff;
+  border: none;
+  background-color: #0000ff;
+  transition: all ease 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #0000a2;
+}
+
+label.required::after {
+  content: "*";
+  color: #ff0000;
+  margin-left: 2px;
+}

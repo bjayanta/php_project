@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <form method="post" action="register.php">
+        <h3>Registration Form</h3>
+
+        <div>
+          <label for="name" class="required">Name</label>
+          <input
+            type="text"
+            placeholder="Max 100 char"
+            name="name"
+            id="name"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="phone" class="required">Phone</label>
+          <input
+            type="text"
+            name="phone"
+            placeholder="+880 xxxx xxxxxx"
+            id="phone"
+            required
+          />
+        </div>
+
+        <div>
+          <label>Address</label>
+          <textarea name="address" placeholder="Max 250 char"></textarea>
+        </div>
+
+        <div>
+          <label class="required">Gender</label>
+
+          <div>
+            <label for="male">
+              <input
+                type="radio"
+                name="gender"
+                value="male"
+                id="male"
+                required
+              />
+              <span>Male</span>
+            </label>
+
+            <label for="female">
+              <input
+                type="radio"
+                name="gender"
+                value="female"
+                id="female"
+                required
+              />
+              <span>Female</span>
+            </label>
+          </div>
+        </div>
+
+        <div>
+          <label class="required">Email</label>
+          <input type="email" placeholder="Max 50 char" name="email" required />
+        </div>
+
+        <div>
+          <label for="" class="required">Password</label>
+          <input
+            type="password"
+            placeholder="Min 6 char"
+            name="password"
+            minlength="6"
+            required
+          />
+        </div>
+
+        <input type="submit" name="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>
