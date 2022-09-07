@@ -2,10 +2,10 @@
     // connect to database
     include_once('connection.php');
 
-    // collect all records
+    // collect all records from form
     $full_name      = $_POST['name'];
     $email_address  = $_POST['email'];
-    $password       = $_POST['password'];
+    $password       = md5($_POST['password']);
     $phone_number   = $_POST['phone'];
     $gender         = $_POST['gender'];
     $address        = $_POST['address'];
